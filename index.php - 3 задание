@@ -20,7 +20,6 @@ if (is_bool($variable)) {
 } elseif (is_null($variable)) {
     $type = "null";
 } else {
-    // Для массивов, объектов, ресурсов и других типов
     $type = "other";
 }
 
