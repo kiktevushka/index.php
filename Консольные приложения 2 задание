@@ -1,0 +1,34 @@
+<?php
+
+$first = trim(fgets(STDIN));
+$second = trim(fgets(STDIN));
+
+$num1 = null;
+$num2 = null;
+
+
+if (filter_var($first, FILTER_VALIDATE_INT) === false) {
+    fwrite(STDERR, "Введите, пожалуйста, число\n");
+    exit(1);
+}
+$num1 = (int)$first;
+
+
+if (filter_var($second, FILTER_VALIDATE_INT) === false) {
+    fwrite(STDERR, "Введите, пожалуйста, число\n");
+    exit(1);
+}
+
+$num2 = (int)$second;
+
+
+if ($num2 === 0) {
+    fwrite(STDERR, "Делить на 0\n");
+    exit(1);
+}
+$result = $num1 / $num2;
+
+echo $result . "\n";
+exit(0);
+
+?>
